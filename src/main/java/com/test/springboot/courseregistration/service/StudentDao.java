@@ -12,6 +12,13 @@ import java.util.List;
 import java.util.UUID;
 
 public class StudentDao {
+    // Table is created accoring to this sql:
+    // CREATE TABLE student
+    // (STUDENT_ID VARCHAR(36),
+    // NAME VARCHAR2(100),
+    // courses VARCHAR2(1024),
+    // );
+    // Registered courses are stored using JSON string in this toy example
     private static final ObjectMapper jsonMapper = new ObjectMapper();
     private static final RowMapper<Student> STUDENT_ROW_MAPPER =
             (rs, rowNum) ->
